@@ -1,0 +1,1 @@
+to_i("0x7fffffffffffffff") + to_f("1e300")

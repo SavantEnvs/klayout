@@ -1,0 +1,11 @@
+project: savantenvs/klayout
+target: fuzz_spice
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_spice/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_spice
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,11 @@
+project: savantenvs/klayout
+target: fuzz_l2n
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_l2n/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_l2n
+    libfuzzer: true
+    timeout: 5

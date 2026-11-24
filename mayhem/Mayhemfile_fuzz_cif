@@ -1,0 +1,11 @@
+project: savantenvs/klayout
+target: fuzz_cif
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cif/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_cif
+    libfuzzer: true
+    timeout: 5

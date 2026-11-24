@@ -1,0 +1,11 @@
+project: savantenvs/klayout
+target: fuzz_oasis
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_oasis/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_oasis
+    libfuzzer: true
+    timeout: 5

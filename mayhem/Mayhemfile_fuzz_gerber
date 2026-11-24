@@ -1,0 +1,11 @@
+project: savantenvs/klayout
+target: fuzz_gerber
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gerber/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_gerber
+    libfuzzer: true
+    timeout: 5

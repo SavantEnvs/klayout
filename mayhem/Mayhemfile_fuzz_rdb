@@ -1,0 +1,11 @@
+project: savantenvs/klayout
+target: fuzz_rdb
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rdb/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_rdb
+    libfuzzer: true
+    timeout: 5
